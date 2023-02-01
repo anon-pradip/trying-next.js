@@ -7,6 +7,10 @@ export default async function Home() {
 
   const res = await data.json()
 
+  if (!res?.results) {
+    return "Loading..."
+  }
+
   return (
     <main className='bg-black text-white'>
       <div className="grid gap-16 grid-cols-fluid px-4 place-items-center">
