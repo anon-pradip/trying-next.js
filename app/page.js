@@ -7,9 +7,11 @@ export default async function Home() {
 
   const res = await data.json()
 
-  if (!res?.results) {
-    return "Loading..."
-  }
+  // if (!res?.results?.length) {
+  //   return (
+  //     <div className='mt-24 ml-28'>Loading...</div>
+  //   )
+  // }
 
   return (
     <main className='bg-black text-white'>
