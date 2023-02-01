@@ -7,20 +7,15 @@ export default async function Home() {
 
   const res = await data.json()
 
-  if (!res?.results?.length) {
-    return (
-      <div className='mt-24 ml-28'>Loading...</div>
-    )
-  } else {
-    return (
-      <main className='bg-black text-white'>
-        <div className="grid gap-16 grid-cols-fluid px-4 place-items-center">
-          {res.results.map(movie => <Movie
-            key={movie.id} id={movie.id} title={movie.title} poster_path={movie.poster_path}
-            release_date={movie.release_date}
-          />)}
-        </div>
-      </main>
-    )
-  }
+
+  return (
+    <main className='bg-black text-white'>
+      <div className="grid gap-16 grid-cols-fluid px-4 place-items-center">
+        {res.results.map(movie => <Movie
+          key={movie.id} id={movie.id} title={movie.title} poster_path={movie.poster_path}
+          release_date={movie.release_date}
+        />)}
+      </div>
+    </main>
+  )
 }
