@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## If you want to check out the live demo then please visit [App](https://trying-next-js-tau.vercel.app/).
 
+Used tmdb api for fetching movies and movie details.
+
 ## Getting Started
 
 First, run the development server:
